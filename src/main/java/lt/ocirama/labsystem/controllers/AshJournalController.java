@@ -4,6 +4,7 @@ import lt.ocirama.labsystem.model.dto.*;
 import lt.ocirama.labsystem.services.AshService;
 import lt.ocirama.labsystem.services.GeneralMoistureService;
 import lt.ocirama.labsystem.services.TotalMoistureService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

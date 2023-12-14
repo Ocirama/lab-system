@@ -38,7 +38,6 @@ public class JwtAuthFilter extends BasicAuthenticationFilter {
             Claims claims = Jwts.parser().setSigningKey(SECRET).parseClaimsJws(jwtToken).getBody();
             String username = claims.getSubject();
             Date tokenExpirationDate = claims.getExpiration();
-
             if (tokenExpirationDate.after(new Date())) {
                 Authentication authentication = new UsernamePasswordAuthenticationToken(username, null, new ArrayList<>());
                 SecurityContextHolder.getContext().setAuthentication(authentication);

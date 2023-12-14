@@ -7,6 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -19,7 +20,8 @@ import javax.sql.DataSource;
         transactionManagerRef = "liteskoTransactionManager",
         basePackages = {"lt.ocirama.labsystem.repositories.litesko"})
 public class LiteskoConfig {
-    @Bean("liteskoDataSourceProperties")
+    @Bean(name = "liteskoDataSourceProperties")
+    @Primary
     @ConfigurationProperties("app.spring.datasource2")
     public DataSourceProperties liteskoDataSourceProperties() {
         return new DataSourceProperties();
@@ -45,6 +47,7 @@ public class LiteskoConfig {
     public JpaTransactionManager transactionManager(@Qualifier("liteskoEntityManager") EntityManagerFactory liteskoEntityManager) {
         JpaTransactionManager transactionManager = new JpaTransactionManager();
         transactionManager.setEntityManagerFactory(liteskoEntityManager);
+
 
         return transactionManager;
     }

@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {SampleListComponent} from './sample-list/sample-list.component';
-import { AuthGuard } from '../auth/auth.guard';
+import {AuthGuard} from '../auth/auth.guard';
 
 
 const routes: Routes = [
@@ -10,7 +10,6 @@ const routes: Routes = [
     component: SampleListComponent
   }
 ];
-
 
 @NgModule({
   imports: [

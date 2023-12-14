@@ -10,7 +10,8 @@ export class ApiService {
 
   constructor(private http: HttpClient) {
   }
-  getWeight(url: string){
+
+  getWeight(url: string) {
     return this.http.get('http://192.168.1.84:8081' + url);
   }
 
@@ -18,13 +19,15 @@ export class ApiService {
     return this.http.get(this.urlPrefix + url, this.getRequestOptions());
   }
 
+
   post(url: string, data: object) {
     return this.http.post(this.urlPrefix + url, data, this.getRequestOptions());
   }
 
-    delete(url: string) {
+  delete(url: string) {
     return this.http.delete(`${this.urlPrefix}${url}`);
   }
+
   private getRequestOptions() {
     const token = sessionStorage.getItem('token');
     const headers = {

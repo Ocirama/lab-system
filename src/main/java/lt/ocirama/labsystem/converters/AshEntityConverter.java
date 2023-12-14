@@ -55,6 +55,7 @@ public class AshEntityConverter {
             result.setDishAndSampleWeightBefore(ashSave.getDishAndSampleWeightBefore());
             gmList.add(result);
             newTray.setAshEntities(gmList);
+
             //result.setDate(java.sql.Date.valueOf(order.getDate()));
         } else {
             result = ashRepository.findOneById(ashSave.getId());
@@ -64,7 +65,6 @@ public class AshEntityConverter {
         }
 
         return result;
-
 
     }
 

@@ -52,7 +52,10 @@ export class TmListComponent implements OnInit {
     this.dataSource.filterPredicate = function(data: TmResultJournal, filter: string): boolean {
       return data.protocolId.includes(filter);
     };
+    // Add this line after initializing the dataSource properties
+    this.dataSource.paginator = this.paginator;
   }
+
 
 
   getResults() {

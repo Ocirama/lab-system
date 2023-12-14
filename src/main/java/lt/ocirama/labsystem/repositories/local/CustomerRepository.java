@@ -13,6 +13,7 @@ public interface CustomerRepository extends Repository<CustomerEntity, Integer> 
 
     List<CustomerEntity> findAll();
 
+
     CustomerEntity findOneById(Integer id);
 
     CustomerEntity save(CustomerEntity order);

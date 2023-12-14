@@ -3,13 +3,14 @@ package lt.ocirama.labsystem.repositories.local;
 import lt.ocirama.labsystem.model.entities.local.AshEntity;
 import lt.ocirama.labsystem.model.entities.local.SampleEntity;
 import lt.ocirama.labsystem.model.entities.local.TrayEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 
 import java.util.Date;
 import java.util.List;
 
-public interface AshRepository extends Repository<AshEntity, Integer> {
+public interface AshRepository extends JpaRepository<AshEntity, Integer> {
 
     List<AshEntity> findAll();
 

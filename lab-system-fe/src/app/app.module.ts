@@ -20,6 +20,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {LoginComponent} from './auth/login/login.component';
 import {MatTableExporterModule} from 'mat-table-exporter';
 import {MatPaginatorIntlCro} from './shared/MatPaginatorIntlCro';
+import {buildServePath} from '@angular-devkit/build-angular/src/webpack/configs/dev-server';
 
 
 @NgModule({

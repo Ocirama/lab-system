@@ -17,7 +17,6 @@ import {LogRoutingModule} from './log-routing.module';
 import {MatTableExporterModule} from 'mat-table-exporter';
 import {DateModalComponent} from '../journal/total-moisture-journal/date-modal/date-modal.component';
 
-
 @NgModule({
   declarations: [ListComponent, ModalComponent, DateModalComponent],
   imports: [

@@ -1,7 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-
-import { ApiService } from '../core/api.service';
+import {Injectable} from '@angular/core';
+import {Observable} from 'rxjs';
+import {ApiService} from '../core/api.service';
 
 interface User {
   email: string;
@@ -12,10 +11,8 @@ interface User {
   providedIn: 'root',
 })
 export class AuthService {
-
   private static readonly key = 'token';
   private token: string;
-
   redirectUrl: string;
 
   constructor(private api: ApiService) {
